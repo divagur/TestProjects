@@ -85,7 +85,9 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 							from (
 									select 
 										stc_SSCC, ord_id order_ID 
-									from {DB}.dbo.LV_StockContainer with(nolock)
+									from 
+									{DB}.dbo.LV_ShipContainer with(nolock)							
+									join {DB}.dbo.LV_StockContainer with(nolock) on stc_ID = shc_ContainerID
 									left join {DB}.dbo.LV_Stock with(nolock) on stk_ContainerID = stc_ID
 									left join {DB}.dbo.LV_StockPackType with(nolock) on spt_StockID = stk_ID
 									left join {DB}.dbo.LV_OrderShipItemStock with(nolock) on stk_ID= oss_StockID 

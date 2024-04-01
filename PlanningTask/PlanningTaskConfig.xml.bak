@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+  <Connection>
+    <Server>DZHURAVLEV</Server>
+    <DataBase>Planning_new</DataBase>
+    <Login>sysadm</Login>
+    <Password>c3lzYWRt</Password>
+    <LastLogin>sysadm</LastLogin>
+  </Connection>
+  <CurrentTaskColumns>
+    <Column>
+      <Id>colDate</Id>
+      <Title>Дата</Title>
+      <Visible>True</Visible>
+      <Width>100</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colTime</Id>
+      <Title>Время</Title>
+      <Visible>True</Visible>
+      <Width>103</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colInOut</Id>
+      <Title>Напр.</Title>
+      <Visible>True</Visible>
+      <Width>91</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colOrderId</Id>
+      <Title>Код заказа</Title>
+      <Visible>True</Visible>
+      <Width>100</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colKlient</Id>
+      <Title>Клиент</Title>
+      <Visible>True</Visible>
+      <Width>100</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colDonePrc</Id>
+      <Title>Собран в (%)</Title>
+      <Visible>True</Visible>
+      <Width>100</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colGateName</Id>
+      <Title>Номер ворот</Title>
+      <Visible>True</Visible>
+      <Width>100</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colShippingPlacesNumber</Id>
+      <Title>Кол-во отгрузочных мест</Title>
+      <Visible>True</Visible>
+      <Width>91</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colAmountDeposit</Id>
+      <Title>Кол-во пополнений</Title>
+      <Visible>True</Visible>
+      <Width>91</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colAssemblyPicking</Id>
+      <Title>Сборка пикинга</Title>
+      <Visible>True</Visible>
+      <Width>91</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colAssemblyPallet</Id>
+      <Title>Сборка паллет</Title>
+      <Visible>True</Visible>
+      <Width>91</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+    <Column>
+      <Id>colAssemblyMezzanine</Id>
+      <Title>Сборка мезонин</Title>
+      <Visible>True</Visible>
+      <Width>91</Width>
+      <BgColor>0</BgColor>
+      <FontColor>0</FontColor>
+    </Column>
+  </CurrentTaskColumns>
+  <UpdateInterval>1</UpdateInterval>
+  <TaskViewFonSize>10</TaskViewFonSize>
+  <TimePeriodColor>bt:10:30:#FFF86F:#3d00f2;le:15::#F03C45:#15b31d;gt:30::#0080FF:#15b31d</TimePeriodColor>
+  <OrderColums />
+  <InOutFilter>0;1;2;3</InOutFilter>
+</Settings>

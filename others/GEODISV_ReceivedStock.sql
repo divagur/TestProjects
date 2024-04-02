@@ -1,14 +1,3 @@
-USE [DD]
-GO
-
-/****** Object:  View [dbo].[GEODISV_ReceivedStock]    Script Date: 02.04.2024 10:13:04 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-
 ALTER view [dbo].[GEODISV_ReceivedStock]
 as
 	

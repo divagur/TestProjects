@@ -13,7 +13,7 @@ ALTER view [dbo].[GEODISV_ReceivedStock]
 as
 	
 				select	max(log_DateTime) MaxLogDT,
-					log_DateTime,
+					--log_DateTime,
 					rct_DepositorID DepositorID, VehicleNo, rct_ID ReceiptID, rct_Code ReceiptCode, CompleteDate,
 					prd_PrimaryCode SKU, prd_SecondaryCode SKU2, prdl_Description Product, loc_Code Location, 
 					sum(lsp_Quantity) Quantity,
@@ -89,7 +89,7 @@ as
 					cmp_FullName,    Seal,   Posex,
 					rct_TypeID,   ProdDescr1, all38.all_Value, all15.all_Value, 
 					untlExpEng.untl_Description,rav4.manufacturer, rav5.RecType, lsa30.Complect
-					,log_DateTime
+					--,log_DateTime
 				having sum(lsk_CUQuantity) <> 0
 
 GO

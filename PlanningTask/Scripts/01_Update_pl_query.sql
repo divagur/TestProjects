@@ -23,7 +23,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			and  oss_TaskID is not null
 			and loc_StorageSystemID = 1
 			and ord_ID = ord_out.ord_ID
-			group by ord_ID, loc_StorageSystemID
+			group by ord_ID
 		) assembly_picking,
 		(
 			SELECT count(loc_StorageSystemID) PicCount
@@ -40,7 +40,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			and  oss_TaskID is not null
 			and loc_StorageSystemID in (3,14)
 			and ord_ID = ord_out.ord_ID
-			group by ord_ID, loc_StorageSystemID
+			group by ord_ID
 		) assembly_pallet,
 		(
 			SELECT count(loc_StorageSystemID) PicCount
@@ -57,7 +57,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			and  oss_TaskID is not null
 			and loc_StorageSystemID = 16
 			and ord_ID = ord_out.ord_ID
-			group by ord_ID, loc_StorageSystemID
+			group by ord_ID
 		) assembly_mezzanine
 		from      
 		

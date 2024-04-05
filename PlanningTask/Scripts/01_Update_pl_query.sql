@@ -81,26 +81,14 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			)order_deposit on order_deposit.ost_OrderID = ord_ID
 			left join 
 			(
-				select order_id,count (distinct stc_SSCC) ShpPlaceNumber
-							from (
-									select 
-										stc_SSCC, ord_id order_ID 
-									from 
-									{DB}.dbo.LV_ShipContainer with(nolock)							
-									join {DB}.dbo.LV_StockContainer with(nolock) on stc_ID = shc_ContainerID
-									left join {DB}.dbo.LV_Stock with(nolock) on stk_ContainerID = stc_ID
-									left join {DB}.dbo.LV_StockPackType with(nolock) on spt_StockID = stk_ID
-									left join {DB}.dbo.LV_OrderShipItemStock with(nolock) on stk_ID= oss_StockID 
-									left join {DB}.dbo.LV_OrderShipItem with(nolock) on osi_ID = oss_OrderShipItemID 
-									left join {DB}.dbo.LV_OrderItem  with(nolock) on osi_OrderItemID = ori_ID
-									left join {DB}.dbo.LV_Order with(nolock)on ord_ID=ori_OrderID 
-									join {DB}.dbo.V_StandardPackType  with(nolock) on  sdp_UnitID = stc_UnitID
-									group by 
-									ord_id,ord_Code, 
-									stc_SSCC 
-							)t
-							where order_id is not null
-							group by order_id
+					select 
+							count(stc_SSCC) ShpPlaceNumber, ord_id order_ID 
+					from {DB}.dbo.lv_ShipContainer with (nolock)
+							inner join {DB}.dbo.LV_ordershipment with (nolock) on  ost_ID = shc_OrderShipmentID
+							inner join {DB}.dbo.LV_StockContainer with(nolock) on stc_id = shc_ContainerID
+							inner join {DB}.dbo.LV_Order with(nolock)on ord_ID=ost_OrderID and ord_DepositorID = 59 
+					group by ord_id
+				
 			)order_place_number on order_place_number.order_id = ord_ID
 			outer apply    
 			(

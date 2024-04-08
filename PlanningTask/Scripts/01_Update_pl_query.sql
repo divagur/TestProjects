@@ -6,9 +6,9 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 		vs.gate_name,cmp_ShortName,     
 		case when ActPcs <> 0 then cast(cast(round(cast(ActPcs as numeric(10, 2)) / ExpPcs * 100, 2) as numeric(10, 2)) as varchar(7)) + N''%'' end Done,      
 		case when ActPcs <> 0 then cast(ActPcs as numeric(10, 2)) / ExpPcs end DoneShare,   
-		ShpPlaceNumber shipping_places_number,
-		order_deposit.deposit_count,
-		(
+		isnull(ShpPlaceNumber,0) shipping_places_number,
+		isnull(order_deposit.deposit_count,0) deposit_count,
+		isnull((
 			SELECT count(loc_StorageSystemID) PicCount
 			FROM          
 			   {DB}.dbo.lv_order ord_in with (nolock)
@@ -24,8 +24,8 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			and loc_StorageSystemID = 1
 			and ord_ID = ord_out.ord_ID
 			group by ord_ID
-		) assembly_picking,
-		(
+		),0) assembly_picking,
+		isnull((
 			SELECT count(loc_StorageSystemID) PicCount
 			FROM          
 			   {DB}.dbo.lv_order ord_in with (nolock)
@@ -41,8 +41,8 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			and loc_StorageSystemID in (3,14)
 			and ord_ID = ord_out.ord_ID
 			group by ord_ID
-		) assembly_pallet,
-		(
+		),0) assembly_pallet,
+		isnull((
 			SELECT count(loc_StorageSystemID) PicCount
 			FROM          
 			   {DB}.dbo.lv_order ord_in with (nolock)
@@ -58,7 +58,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			and loc_StorageSystemID = 16
 			and ord_ID = ord_out.ord_ID
 			group by ord_ID
-		) assembly_mezzanine
+		),0) assembly_mezzanine
 		from      
 		
 			{DB}.dbo.LV_Order ord_out with(nolock)
@@ -133,7 +133,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 				vs.gate_name,cmp_ShortName, 
 				(case when a1.lsk_CUQuantity <> 0 then cast(cast(round(cast(a1.lsk_CUQuantity as numeric(10, 2)) / rci_ExpQuantity * 100, 2) as numeric(10, 2)) as varchar(7)) + N''%'' end) Done,  
 				(case when a1.lsk_CUQuantity <> 0 then cast(a1.lsk_CUQuantity as numeric(10, 2)) / rci_ExpQuantity end) DoneShare,            
-				sop.shipping_places_number,
+				isnull(sop.shipping_places_number,0) shipping_places_number,
 				0 deposit_count,
 				0 assembly_picking,
 				0 assembly_pallet,

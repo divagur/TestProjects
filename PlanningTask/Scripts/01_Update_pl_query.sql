@@ -68,7 +68,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			left join {DB}.dbo.LV_OrderShipment with (nolock) on ost_OrderID = ord_ID
 			left join
 			(
-				SELECT ost_OrderID, count(tkd_PrereqTaskID) deposit_count
+				SELECT ost_OrderID, count(distinct tkd_PrereqTaskID) deposit_count
 				FROM          
 				    {DB}.dbo.LV_OrderShipItemStock with (nolock)
 				inner join  {DB}.dbo.LV_OrderShipItem with (nolock) ON LV_OrderShipItemStock.oss_OrderShipItemID = LV_OrderShipItem.osi_ID 

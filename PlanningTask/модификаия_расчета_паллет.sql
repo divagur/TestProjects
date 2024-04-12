@@ -1,7 +1,7 @@
 SELECT ord_id, 
 		case when loc_StorageSystemID = 1 then count( loc_ID) end as 'Pic',
 		case when loc_StorageSystemID = 16 then count(distinct loc_ID) end as 'Mez',
-		case when loc_StorageSystemID in (3,14) then count( distinct tsk_ContainerID ) end as 'Pal'
+		case when loc_StorageSystemID in (3,14) then count( distinct tsk_SSCC) end as 'Pal'
 FROM          
 			lv_order with (nolock)
 inner join	LV_OrderShipment with (nolock) on ord_id = ost_OrderID

@@ -26,7 +26,7 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			group by ord_ID
 		),0) assembly_picking,
 		isnull((
-			SELECT count( distinct loc_StorageSystemID) PicCount
+			SELECT count( distinct tsk_SSCC) PicCount
 			FROM          
 			   {DB}.dbo.lv_order ord_in with (nolock)
 			inner join {DB}.dbo.LV_OrderShipment with (nolock) on ord_id = ost_OrderID

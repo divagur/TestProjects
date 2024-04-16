@@ -132,8 +132,8 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 				so.lv_order_id, vs.s_date,     
 				vs.slot_time,  vs.s_in, N''вход'' InOut, so.lv_order_code,null as os_lvcode, 
 				vs.gate_name,cmp_ShortName, 
-				(case when a1.lsk_CUQuantity <> 0 then cast(cast(round(cast(a1.lsk_CUQuantity as numeric(10, 2)) / rci_ExpQuantity * 100, 2) as numeric(10, 2)) as varchar(7)) + N''%'' end) Done,  
-				(case when a1.lsk_CUQuantity <> 0 then cast(a1.lsk_CUQuantity as numeric(10, 2)) / rci_ExpQuantity end) DoneShare,            
+				(case when a1.rci_ActQuantity <> 0 then cast(cast(round(cast(a1.rci_ActQuantity as numeric(10, 2)) / rci_ExpQuantity * 100, 2) as numeric(10, 2)) as varchar(7)) + N''%'' end) Done,  
+				(case when a1.rci_ActQuantity <> 0 then cast(a1.rci_ActQuantity as numeric(10, 2)) / rci_ExpQuantity end) DoneShare,            
 				isnull(sop.shipping_places_number,0) shipping_places_number,
 				0 deposit_count,
 				0 assembly_picking,
@@ -150,18 +150,22 @@ select ord_ID lv_order_id,ISNULL( vs.s_date, ISNULL(ord_ExpExecuteDate, ord_Inpu
 			left join {DB}.dbo.LV_ProgressStatus with(nolock) on pst_ID = rct_ProgressID     
 			left join {DB}.dbo.LV_Messages with(nolock) on msg_code = pst_MessageCode and msg_languageID = 4     
 			left join (       
-						select         rct_id          ,sum(rci_ExpQuantity) as rci_ExpQuantity        ,sum(rci_ActQuantity) as rci_ActQuantity        ,a.lsk_CUQuantity       
+						select  
+								rct_id, 
+								sum(rci_ExpQuantity) as rci_ExpQuantity,
+								sum(rci_ActQuantity) as rci_ActQuantity        
+								--,a.lsk_CUQuantity       
 						from 
 							{DB}.dbo.LV_Receipt with(nolock)       
 							inner join {DB}.dbo.LV_ReceiptItem with (nolock) on rci_ReceiptID = rct_ID        
-							inner join (             
+							/*inner join (             
 											SELECT log_ReceiptID, sum(lsk_CUQuantity) as lsk_CUQuantity           
 											FROM 
 													{DB}.[dbo].[LV_LogStock]             
 													inner join {DB}.dbo.LV_Log  on  log_ID = lsk_LogID             
 											group by log_ReceiptID          
-										) a on log_ReceiptID = rci_ReceiptID        
-						group by rct_id,lsk_CUQuantity     
+										) a on log_ReceiptID = rci_ReceiptID*/        
+						group by rct_id --,lsk_CUQuantity     
 					) a1 on a1.rct_id = LV_Receipt.rct_ID   
 		where      
 				--(@In = 1 or @In is NULL)

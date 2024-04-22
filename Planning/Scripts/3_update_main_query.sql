@@ -1,8 +1,8 @@
-update pl_query set qry_Repeating = 
-'
+update pl_query set qry_Repeating = '
+ 
 select vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
 				vs.slot_time,
-				vs.s_in, N''выход'' InOut, so.lv_order_code, vs.dep_lv_id, vs.dep_name, vs.sp_condition, vs.is_courier,
+				vs.s_in, N''выход'' InOut, so.lv_order_code,sop.os_lvcode, vs.dep_lv_id, vs.dep_name, vs.sp_condition, vs.is_courier,
 				vs.gate_id, vs.gate_name,cmp_ShortName,
 				cast(ord_StatusID as nvarchar(11)) + N'' - '' + isnull(msg_Greek, N'''') OrdStatusText,
 				(
@@ -19,12 +19,13 @@ select vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
 				vs.forwarder_fio,ort_Code + N'' - '' + ort_Description OrdLVType,
 				vs.stamp_number,
 				vs.is_add_lv,
-				so.shipping_places_number,
-				so.order_weight
+				sop.shipping_places_number,
+				sop.order_part_weight,vs.supplier_name
 				
 		from 
 			v_shipments vs with(nolock)
 			left join shipment_orders so on (vs.shp_id = so.shipment_id) 
+			left join shipment_order_parts sop on sop.sh_order_id = so.id
 			left join {DB}.dbo.LV_Order with(nolock) on ord_ID = so.lv_order_id
 			outer apply
 		(
@@ -97,9 +98,9 @@ select vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
 	union all
 	
 	select 
-				vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
+				vs.shp_id, so.id, so.lv_order_id,  vs.s_date, vs.time_slot_id,
 				vs.slot_time,
-				vs.s_in, N''вход'' InOut, so.lv_order_code, vs.dep_lv_id, vs.dep_name, vs.sp_condition, vs.is_courier,
+				vs.s_in, N''вход'' InOut, so.lv_order_code,null as os_lvcode, vs.dep_lv_id, vs.dep_name, vs.sp_condition, vs.is_courier,
 				vs.gate_id, vs.gate_name,cmp_ShortName,
 				cast(rct_ProgressID as nvarchar(11)) + N'' - '' + isnull(msg_Greek, N'''') StatusText,
 				--(       case         when a1.lsk_CUQuantity <> 0 then cast(cast(round(cast(a1.lsk_CUQuantity as numeric(10, 2)) / rci_ExpQuantity * 100, 2) as numeric(10, 2)) as varchar(7)) + N''%''        end       ) Done,      
@@ -118,7 +119,7 @@ select vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
 				 vs.stamp_number,
 				vs.is_add_lv,
 				so.shipping_places_number,
-				so.order_weight
+				so.order_weight,vs.supplier_name
 	from 
 			v_shipments vs with(nolock)
 			left join shipment_orders so on (vs.shp_id = so.shipment_id) 
@@ -145,7 +146,7 @@ select vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
 													inner join {DB}.dbo.LV_Log  on  log_ID = lsk_LogID             
 											group by log_ReceiptID          
 										) a on log_ReceiptID = rci_ReceiptID*/        
-						group by rct_id --,lsk_CUQuantity   
+						group by rct_id --,lsk_CUQuantity 
 		) a1 on a1.rct_id = LV_Receipt.rct_ID
 	where 
 			(@In = 1 or @In is NULL)
@@ -161,7 +162,7 @@ select vs.shp_id, so.id, so.lv_order_id, vs.s_date, vs.time_slot_id,
 union all
 select m.id shp_id, mi.id ord_id, mi.TklLVID lv_order_id, m.m_date, m.time_slot_id,
 				(case m.sp_condition when 0 then ts.slot_time else m.special_time end) SlotTime,
-				cast(NULL as bit) s_in, N''перем'' InOut, tkl_Code lv_order_code, d.lv_id dep_lv_id, d.name dep_name,  m.sp_condition, 
+				cast(NULL as bit) s_in, N''перем'' InOut, tkl_Code lv_order_code,null as os_lvcode, d.lv_id dep_lv_id, d.name dep_name,  m.sp_condition, 
 				cast(NULL as bit) is_courier, cast(NULL as int) gate_id, cast(NULL as nvarchar(8)) gate_name,
 				(case when m.def_customer = 0 then d.name else N''BAXI'' end) cmp_ShortName,
 				isnull(pst_Code, N'''') + N'' - '' + isnull(msg_Greek, N'''') StatusText,
@@ -176,20 +177,20 @@ select m.id shp_id, mi.id ord_id, mi.TklLVID lv_order_id, m.m_date, m.time_slot_
 				cast(NULL as varchar(80)) forwarder_fio, cast(NULL as varchar(77)) OrdLVType, cast(NULL as varchar(25)) stamp_number,
 				1 is_add_lv,
 				null shipping_places_number,
-				null order_weight
+				null order_weight, null supplier_name
 from movement m with(nolock)
 left join movement_item mi with(nolock) on mi.movement_id = m.id
 left join depositors d with(nolock) on d.id = mi.depositor_id
 left join time_slot ts with(nolock) on ts.id = m.time_slot_id
 left join delay_reasons dr with(nolock) on dr.id = m.delay_reasons_id
-left join Lvision.dbo.LV_TaskList with(nolock) on tkl_ID = mi.TklLVID
-left join Lvision.dbo.LV_ProgressStatus with(nolock) on pst_ID = tkl_StatusID
-left join Lvision.dbo.LV_Messages with(nolock) on msg_code = pst_MessageCode and msg_languageID = 4
+left join {DB}.dbo.LV_TaskList with(nolock) on tkl_ID = mi.TklLVID
+left join {DB}.dbo.LV_ProgressStatus with(nolock) on pst_ID = tkl_StatusID
+left join {DB}.dbo.LV_Messages with(nolock) on msg_code = pst_MessageCode and msg_languageID = 4
 outer apply
 (
 	select cast(min(tsk_ActualTime) as smalldatetime) ldg_Began, cast(max(tsk_ActualTime) as smalldatetime) ldg_Ended,
 	sum(case when tsk_StatusID in (3, 4) then 1 else 0 end) CntDone, count(*) CntOverall
-	from Lvision.dbo.LV_Task with(nolock)
+	from {DB}.dbo.LV_Task with(nolock)
 	where tsk_TaskListID = mi.TklLVID
 ) a1
 
@@ -201,5 +202,6 @@ where (@In = 2 or @In is NULL)
   )
   and m.id = isnull(@ShpID, m.id)
   and (mi.id = isnull(@OrdID, mi.id) or mi.id is NULL)
+
 '
 where qry_ID = 1

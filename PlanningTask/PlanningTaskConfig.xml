@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Settings>
   <Connection>
-    <Server></Server>
-    <DataBase></DataBase>
-    <Login></Login>
-    <Password></Password>
-    <LastLogin></LastLogin>
+    <Server>10.7.12.21</Server>
+    <DataBase>Planning</DataBase>
+    <Login>lvuser</Login>
+    <Password>MQ==</Password>
+    <LastLogin>
+    </LastLogin>
   </Connection>
   <CurrentTaskColumns>
     <Column>
@@ -107,7 +108,7 @@
   </CurrentTaskColumns>
   <UpdateInterval>1</UpdateInterval>
   <TaskViewFonSize>10</TaskViewFonSize>
-  <TimePeriodColor>bt:10:30:#FFF86F:#3d00f2;le:15::#F03C45:#15b31d;gt:30::#0080FF:#15b31d</TimePeriodColor>
+  <TimePeriodColor>bt:10:30:#FFF86F:#3d00f2;le:15::#F03C45:#15b31d;gt:30::0:0</TimePeriodColor>
   <OrderColums />
   <InOutFilter>0;1;2;3</InOutFilter>
 </Settings>

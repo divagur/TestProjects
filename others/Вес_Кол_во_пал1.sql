@@ -3,6 +3,7 @@
 select distinct
 		ord_ID
 		, (shc_ID) 
+		,  ost_id
 		, sum (isnull(a1.TotNetWeght, a.TotNetWeght) ) totNetWeght
 		, (isnull(a1.PalWeght, a.PalWeght) ) PalWeght
 from
@@ -27,5 +28,5 @@ left join 	(
 			join V_StandardPackType  with(nolock) on  sdp_UnitID = stc_UnitID
 		) a1 on a1.ContainerID = shc_ContainerID
 where
-		ord_id =  46450
-group by ord_ID, shc_ID, (isnull(a1.PalWeght, a.PalWeght) )
+		ord_id =  46434
+group by ord_ID, shc_ID, ost_id, (isnull(a1.PalWeght, a.PalWeght) )

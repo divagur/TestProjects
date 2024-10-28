@@ -1,4 +1,4 @@
-<?query --
+<?query -----
 select q.*,cast(
 		(case		
 			when is_add_lv = 1 then 0XFF00A2E8

@@ -1,108 +1,85 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Settings>
   <Connection>
-    <Server></Server>
-    <DataBase></DataBase>
-    <Login></Login>
-    <Password></Password>
-    <LastLogin></LastLogin>
+    <Server>DZHURAVLEV</Server>
+    <DataBase>Planning</DataBase>
+    <Login>sysadm</Login>
+    <Password>c3lzYWRt</Password>
+    <LastLogin>
+    </LastLogin>
   </Connection>
   <CurrentTaskColumns>
     <Column>
       <Id>colDate</Id>
       <Title>Дата</Title>
       <Visible>True</Visible>
-      <Width>100</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>173</Width>
     </Column>
     <Column>
       <Id>colTime</Id>
       <Title>Время</Title>
       <Visible>True</Visible>
-      <Width>103</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>177</Width>
     </Column>
     <Column>
       <Id>colInOut</Id>
       <Title>Напр.</Title>
       <Visible>True</Visible>
-      <Width>91</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>157</Width>
     </Column>
     <Column>
       <Id>colOrderId</Id>
       <Title>Код заказа</Title>
       <Visible>True</Visible>
-      <Width>100</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>173</Width>
     </Column>
     <Column>
       <Id>colKlient</Id>
       <Title>Клиент</Title>
       <Visible>True</Visible>
-      <Width>100</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>173</Width>
     </Column>
     <Column>
       <Id>colDonePrc</Id>
       <Title>Собран в (%)</Title>
       <Visible>True</Visible>
-      <Width>100</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>172</Width>
     </Column>
     <Column>
       <Id>colGateName</Id>
       <Title>Номер ворот</Title>
       <Visible>True</Visible>
-      <Width>100</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>173</Width>
     </Column>
     <Column>
       <Id>colShippingPlacesNumber</Id>
       <Title>Кол-во отгрузочных мест</Title>
       <Visible>True</Visible>
-      <Width>91</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>157</Width>
     </Column>
     <Column>
       <Id>colAmountDeposit</Id>
       <Title>Кол-во пополнений</Title>
       <Visible>True</Visible>
-      <Width>91</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>157</Width>
     </Column>
     <Column>
       <Id>colAssemblyPicking</Id>
       <Title>Сборка пикинга</Title>
       <Visible>True</Visible>
-      <Width>91</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>157</Width>
     </Column>
     <Column>
       <Id>colAssemblyPallet</Id>
       <Title>Сборка паллет</Title>
       <Visible>True</Visible>
-      <Width>91</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
+      <Width>157</Width>
     </Column>
     <Column>
       <Id>colAssemblyMezzanine</Id>
       <Title>Сборка мезонин</Title>
       <Visible>True</Visible>
       <Width>91</Width>
-      <BgColor>0</BgColor>
-      <FontColor>0</FontColor>
     </Column>
   </CurrentTaskColumns>
   <UpdateInterval>1</UpdateInterval>

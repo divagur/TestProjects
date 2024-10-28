@@ -1,4 +1,4 @@
-select q.*,cast(
+    select q.*,cast(
 		(case		
 			when is_add_lv = 1 then 0XFF00A2E8
 			when s_in is not NULL and datediff(minute, cast(s_date as datetime) + cast(slot_time as datetime), submission_time) >0

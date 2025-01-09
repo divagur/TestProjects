@@ -11,14 +11,15 @@ CREATE TABLE [dbo].[shipmnet_invoices](
 	[create_date] [datetime] NULL,
 	[actual_date] [datetime] NULL,
 	[number] [varchar](20) NULL,
-	[invoice_type] [bit] NULL,
+	[invoice_type] [varchar](32) NULL,
 	[source_code] [varchar](10) NULL,
 	[recipient_code] [varchar](10) NULL,
 	[delivery_type] [varchar](128) NULL,
+	[descr] [varchar](512) NULL,
  CONSTRAINT [PK_shipmnet_invoices] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 

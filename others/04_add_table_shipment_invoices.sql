@@ -6,7 +6,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[shipmnet_invoices](
-	[id] [int] NOT NULL,
+	[id] [int]  IDENTITY(1,1) NOT NULL,
 	[shp_id] [int] NULL,
 	[create_date] [datetime] NULL,
 	[actual_date] [datetime] NULL,
@@ -15,7 +15,8 @@ CREATE TABLE [dbo].[shipmnet_invoices](
 	[source_code] [varchar](10) NULL,
 	[recipient_code] [varchar](10) NULL,
 	[delivery_type] [varchar](128) NULL,
-	[descr] [varchar](512) NULL,
+	[Status] [varchar](32) NULL,
+	[Error] [varchar](512) NULL
  CONSTRAINT [PK_shipmnet_invoices] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC

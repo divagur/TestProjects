@@ -1,23 +1,9 @@
--- ================================================
--- Template generated from Template Explorer using:
--- Create Scalar Function (New Menu).SQL
---
--- Use the Specify Values for Template Parameters 
--- command (Ctrl-Shift-M) to fill in the parameter 
--- values below.
---
--- This block of comments will not be included in
--- the definition of the function.
--- ================================================
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
--- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date, ,>
--- Description:	<Description, ,>
--- =============================================
+
 CREATE FUNCTION GetShipmentLvIdByCode
 (
 	@LvCode varchar(32),
@@ -38,16 +24,27 @@ BEGIN
 	from depositors with(nolock)
 	where id = @DepId
 
-	if @In = 0
-	begin
-		select @LvId = 
-		from LV
-	end
-	else
-	begin
-	end
 
-	RETURN <@ResultVar, sysname, @Result>
+	if (@LVBase is not null)
+	begin
+		if @In = 0
+		begin
+			set @sql = 'select @LvId = shp_ID				
+						from LV_Shipment
+						where
+							shp_Code = @LvCode'
+		end
+		else
+		begin
+			set @Sql = 'select @LvId = rct_ID				
+						from LV_Receipt
+						where
+							rct_Code = @LvCode'
+		end
+
+		exec sp_executesql @Sql, N'@LvId int, @LvCode varchar(32)',  @LvId, @LvCode;
+	end
+	RETURN @LvId
 
 END
 GO

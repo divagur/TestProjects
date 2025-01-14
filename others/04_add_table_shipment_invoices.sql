@@ -5,7 +5,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[shipmnet_invoices](
+CREATE TABLE [dbo].[shipment_invoices](
 	[id] [int]  IDENTITY(1,1) NOT NULL,
 	[shp_id] [int] NULL,
 	[create_date] [datetime] NULL,
@@ -17,20 +17,20 @@ CREATE TABLE [dbo].[shipmnet_invoices](
 	[delivery_type] [varchar](128) NULL,
 	[Status] [varchar](32) NULL,
 	[Error] [varchar](512) NULL
- CONSTRAINT [PK_shipmnet_invoices] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_shipment_invoices] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[shipmnet_invoices]  WITH CHECK ADD  CONSTRAINT [FK_shipmnet_invoices_shipmnet] FOREIGN KEY([shp_id])
+ALTER TABLE [dbo].[shipment_invoices]  WITH CHECK ADD  CONSTRAINT [FK_shipment_invoices_shipmnet] FOREIGN KEY([shp_id])
 REFERENCES [dbo].[shipments] ([id])
 ON UPDATE CASCADE
 ON DELETE CASCADE
 GO
 
-ALTER TABLE [dbo].[shipmnet_invoices] CHECK CONSTRAINT [FK_shipmnet_invoices_shipmnet]
+ALTER TABLE [dbo].[shipment_invoices] CHECK CONSTRAINT [FK_shipment_invoices_shipmnet]
 GO
 
 

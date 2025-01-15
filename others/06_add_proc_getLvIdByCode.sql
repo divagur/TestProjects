@@ -45,3 +45,4 @@ declare
 	SELECT @LvId
 END
 GO
+GRANT EXECUTE ON OBJECT::dbo.SP_PL_GetShipmentLvIdByCode  TO pl_user;

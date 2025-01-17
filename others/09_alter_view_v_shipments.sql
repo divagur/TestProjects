@@ -1,5 +1,3 @@
-USE [Planning_curr]
-GO
 
 /****** Object:  View [dbo].[v_shipments]    Script Date: 16.01.2025 9:25:49 ******/
 SET ANSI_NULLS ON

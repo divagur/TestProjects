@@ -12,11 +12,17 @@ CREATE TABLE [dbo].[shipment_invoices](
 	[actual_date] [datetime] NULL,
 	[number] [varchar](20) NULL,
 	[invoice_type] [varchar](32) NULL,
-	[source_code] [varchar](10) NULL,
+	[customs_code] [varchar](10) NULL,
+	[supplier_code] [varchar](10) NULL,
 	[recipient_code] [varchar](10) NULL,
 	[delivery_type] [varchar](128) NULL,
-	[Status] [varchar](32) NULL,
-	[Error] [varchar](512) NULL
+	container_number [varchar](32) NULL,
+	truck_number [varchar](32) NULL,
+	trailer_number [varchar](32) NULL,
+	driver [varchar](32) NULL,
+	supplier_delivery_day int NULL,
+	[status] [varchar](32) NULL,
+	[error] [varchar](512) NULL
  CONSTRAINT [PK_shipment_invoices] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC

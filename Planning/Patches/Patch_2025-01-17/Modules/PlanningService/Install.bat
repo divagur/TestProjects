@@ -1,0 +1,1 @@
+sc create PlanningService binPath="PlanningService.exe" DisplayName= "PlanningService" type=own start=auto

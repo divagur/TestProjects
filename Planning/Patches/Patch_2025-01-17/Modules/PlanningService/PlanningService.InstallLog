@@ -1,0 +1,26 @@
+﻿Выполняется установка сборки 'D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.InstallLog
+   assemblypath = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe
+Устанавливается служба PlanningService...
+Создается исходный EventLog PlanningService в журнале Application...
+Выполняется откат для сборки 'D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.InstallLog
+   assemblypath = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe
+Восстанавливается исходное состояние журнала событий для источника PlanningService.
+Выполняется установка сборки 'D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.InstallLog
+   assemblypath = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe
+Устанавливается служба PlanningService...
+Служба PlanningService успешно установлена.
+Создается исходный EventLog PlanningService в журнале Application...
+Выполняется фиксация сборки 'D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.InstallLog
+   assemblypath = D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe

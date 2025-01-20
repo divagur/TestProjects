@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+	<RootPath></RootPath>
+	<InputFileDirPath></InputFileDirPath>
+	<LogDirPath></LogDirPath>
+	<FileInvoiceCustomMask>InvoiceCustom</FileInvoiceCustomMask>
+	<FileInvoiceProductionMask>InvoiceTimeSlot</FileInvoiceProductionMask>
+	<TimerInterval>30</TimerInterval>
+	<ServerName></ServerName>
+	<PlanningBaseName>Planning</PlanningBaseName>
+	<PlanningBaseLogin></PlanningBaseLogin>
+	<PlanningBasePwd></PlanningBasePwd>
+</Settings>

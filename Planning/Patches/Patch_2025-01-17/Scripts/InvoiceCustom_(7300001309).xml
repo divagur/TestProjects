@@ -1,0 +1,13 @@
+﻿<WarehouseDataExchange Source="1c" Receiver="Planning" Date="06.12.2024 05:12:40" User="06.12.2024 17:12:40">
+	<Document Type="InvoiceCustom" Date="8.10.24 12:00:00" Number="7300001309_1">
+		<Status>new</Status>
+		<ActualDate>6.12.24 05:12:40</ActualDate>
+		<CustomsCode>10131010</CustomsCode>
+		<RecipientCode>999</RecipientCode>
+		<DeliveryType>Truck</DeliveryType>
+		<ContainerNumber>90000078654</ContainerNumber>
+		<TruckNumber>3213</TruckNumber>
+		<TrailerNumber>125-99-88</TrailerNumber>
+		<Driver>Ivanov Ivan</Driver>
+	</Document>
+</WarehouseDataExchange>

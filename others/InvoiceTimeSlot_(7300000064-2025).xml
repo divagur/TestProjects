@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<WarehouseDataExchange Source="1c" Receiver="Planning" Date="06.12.2024 05:03:04" User="Администратор">
+	<Document Type="InvoiceTimeSlot" Date="06.02.2025 05:03:04" Number="7300000064-2025">
+		<Status>new</Status>
+		<ActualDate>6.02.2025 05:03:04</ActualDate>
+		<SupplierCode>700</SupplierCode>
+		<RecipientCode>999</RecipientCode>
+		<DeliveryType>Truck</DeliveryType>
+		<ContainerNumber>90000078654</ContainerNumber>
+		<TruckNumber>3213</TruckNumber>
+		<TrailerNumber>Уточняется</TrailerNumber>
+		<SupplierDeliveryDay>10</SupplierDeliveryDay>
+		<Driver></Driver>
+	</Document>
+</WarehouseDataExchange>

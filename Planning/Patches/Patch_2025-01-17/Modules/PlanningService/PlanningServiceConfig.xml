@@ -6,6 +6,7 @@
 	<FileInvoiceProductionMask>InvoiceTimeSlot</FileInvoiceProductionMask>
 	<TimerInterval>30</TimerInterval>
 	<ServerName>DZHURAVLEV</ServerName>
+	<DebugFileProcessing>1</DebugFileProcessing>
 	<PlanningBaseName>Planning_curr</PlanningBaseName>
 	<PlanningBaseLogin>sysadm</PlanningBaseLogin>
 	<PlanningBasePwd>sysadm</PlanningBasePwd>

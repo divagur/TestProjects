@@ -1,1 +1,1 @@
-sc create PlanningService binPath="C:\Users\d.zhuravlev\Planning\master\Planning.Service\bin\Debug\PlanningService.exe" DisplayName= "PlanningService" type=own start=auto
+sc create PlanningService binPath="D:\Repository\Planning\master\Planning.Service\bin\Debug\PlanningService.exe" DisplayName= "PlanningService" type=own start=auto

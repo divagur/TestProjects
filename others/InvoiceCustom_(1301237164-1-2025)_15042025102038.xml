@@ -10,7 +10,7 @@
 		<ContainerNumber>Уточняется</ContainerNumber>
 		<TruckNumber>AC06791  MY695</TruckNumber>
 		<TrailerNumber>Уточняется</TrailerNumber>
-		<Driver>Уточняется</Driver>
+		<Driver>Уточняется_</Driver>
 		<SupplierDeliveryDay>6</SupplierDeliveryDay>
 	</Document>
 </WarehouseDataExchange>

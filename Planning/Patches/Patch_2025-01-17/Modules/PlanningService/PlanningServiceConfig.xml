@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Settings>
+	<RootPath>D:\Temp\PlanningServices</RootPath>
 	<InputFileDirPath>D:\Temp\PlanningServices\InputFiles</InputFileDirPath>
 	<LogDirPath>D:\Temp\PlanningServices\FileLogStorage</LogDirPath>
 	<FileInvoiceCustomMask>InvoiceCustom</FileInvoiceCustomMask>
 	<FileInvoiceProductionMask>InvoiceTimeSlot</FileInvoiceProductionMask>
+	<DeliveryTypeDefault>Truck</DeliveryTypeDefault>
 	<TimerInterval>30</TimerInterval>
-	<ServerName>DZHURAVLEV</ServerName>
-	<PlanningBaseName>Planning_curr</PlanningBaseName>
+	<DebugFileProcessing>0</DebugFileProcessing>
+	<ServerName>ZDV\MS2019DVG</ServerName>
+	<PlanningBaseName>Planning</PlanningBaseName>
 	<PlanningBaseLogin>sysadm</PlanningBaseLogin>
 	<PlanningBasePwd>sysadm</PlanningBasePwd>
 </Settings>

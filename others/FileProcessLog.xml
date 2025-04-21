@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FilesProcessLog>
+  <File RowIndex="1" FileName="InvoiceTimeSlot_(7300000080-2025).xml" ProcessDate="27.01.2025 17:39:50" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(7300000080-2025)_27012025053950.xml" />
+  <File RowIndex="2" FileName="InvoiceCustom_(1354)_01042025102523.xml" ProcessDate="01.04.2025 13:18:06" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceCustom_(1354)_01042025102523_01042025011806.xml" />
+  <File RowIndex="3" FileName="InvoiceTimeSlot_(7300000427-1-2025)_03042025064834.xml" ProcessDate="04.04.2025 9:22:17" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(7300000427-1-2025)_03042025064834_04042025092217.xml" />
+  <File RowIndex="4" FileName="InvoiceTimeSlot_(1301237164-1-2025)_14042025012716.xml" ProcessDate="15.04.2025 10:39:44" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(1301237164-1-2025)_14042025012716_15042025103944.xml" />
+  <File RowIndex="5" FileName="InvoiceCustom_(1301237164-1-2025)_15042025102038.xml" ProcessDate="15.04.2025 10:49:44" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceCustom_(1301237164-1-2025)_15042025102038_15042025104944.xml" />
+  <File RowIndex="6" FileName="InvoiceTimeSlot_(BM12025000001333-1-2025)_18042025024432.xml" ProcessDate="21.04.2025 10:54:10" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(BM12025000001333-1-2025)_18042025024432_21042025105410.xml" />
+  <File RowIndex="7" FileName="InvoiceTimeSlot_(BXRU20250418059-1-2025)_18042025011601.xml" ProcessDate="21.04.2025 10:54:11" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(BXRU20250418059-1-2025)_18042025011601_21042025105411.xml" />
+  <File RowIndex="8" FileName="InvoiceTimeSlot_(BXRU20250418060-1-2025)_18042025011801.xml" ProcessDate="21.04.2025 10:54:11" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(BXRU20250418060-1-2025)_18042025011801_21042025105411.xml" />
+  <File RowIndex="9" FileName="InvoiceTimeSlot_(BM02025000000983-1-2025)_21042025010252.xml" ProcessDate="21.04.2025 13:49:44" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(BM02025000000983-1-2025)_21042025010252_21042025014944.xml" />
+  <File RowIndex="10" FileName="InvoiceTimeSlot_(BM02025000000985-1-2025)_21042025013053.xml" ProcessDate="21.04.2025 13:49:45" Status="Успешно" Error="" FilePath="C:\BAXI\InvDone\InvoiceTimeSlot_(BM02025000000985-1-2025)_21042025013053_21042025014945.xml" />
+</FilesProcessLog>

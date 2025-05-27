@@ -1,0 +1,15 @@
+﻿<WarehouseDataExchange Source="1c" Receiver="Planning" Date="21.05.2025 03:17:13" User="Оператор">
+	<Document Type="InvoiceTimeSlot" Date="21.05.2025" Number="7300000649-1-2025">
+		<Status>new</Status>
+		<ActualDate>21.05.2025 12:00:00</ActualDate>
+		<SupplierCode>700</SupplierCode>
+		<RecipientCode>999</RecipientCode>
+		<DeliveryType>Truck</DeliveryType>
+		<ShippingСompany>00027</ShippingСompany>
+		<ContainerNumber>Уточняется</ContainerNumber>
+		<TruckNumber>TF YI 190 / TF YI 472</TruckNumber>
+		<TrailerNumber>Уточняется</TrailerNumber>
+		<Driver>Уточняется</Driver>
+		<SupplierDeliveryDay>7</SupplierDeliveryDay>
+	</Document>
+</WarehouseDataExchange>

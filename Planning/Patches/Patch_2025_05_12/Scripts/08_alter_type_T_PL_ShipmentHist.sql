@@ -1,7 +1,4 @@
-USE [Planning_curr]
-GO
 
-/****** Object:  UserDefinedTableType [dbo].[T_PL_ShipmentHist]    Script Date: 29.05.2025 14:09:34 ******/
 DROP TYPE [dbo].[T_PL_ShipmentHist]
 GO
 

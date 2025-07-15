@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+  <Connection>
+    <ServerName>DZHURAVLEV</ServerName>
+    <BaseName>Planning_v2</BaseName>
+    <UserName>sysadm</UserName>
+    <Password>QKPKVWWMNEQ=</Password>
+  </Connection>
+  <DefaultWarehouseCode>999</DefaultWarehouseCode>
+  <DefaultTransportViewCode>Truck</DefaultTransportViewCode>
+</Settings>

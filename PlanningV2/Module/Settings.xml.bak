@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+  <Connection>
+    <ServerName>DZHURAVLEV</ServerName>
+    <BaseName>Planning_curr</BaseName>
+    <UserName>sysadm</UserName>
+    <Password>sysadm</Password>
+    <LastLogin>
+    </LastLogin>
+  </Connection>
+  <ReportTemplate>
+    <ShipmentTemplate>
+    </ShipmentTemplate>
+    <ReceiptTemplate>
+    </ReceiptTemplate>
+    <PeriodTemplate>
+    </PeriodTemplate>
+  </ReportTemplate>
+  <TaskUpdateInterval>10</TaskUpdateInterval>
+  <TaskViewFonSize>5</TaskViewFonSize>
+  <CurrentTaskColumns />
+  <VolumeCalcTemplates />
+  <Reports>
+    <Report>
+      <Id>1</Id>
+      <Name>Лист отгрузки</Name>
+      <TemplatePath>
+		C:\Users\d.zhuravlev\Planning\Planning_TestVer\Planning\bin\Debug\Reports\ЛистОтгрузки.xltx
+      </TemplatePath>
+    </Report>
+    <Report>
+      <Id>2</Id>
+      <Name>Лист прихода</Name>
+      <TemplatePath>
+		C:\Users\d.zhuravlev\Planning\Planning_TestVer\Planning\bin\Debug\Reports\ЛистПрихода.xltx
+      </TemplatePath>
+    </Report>
+    <Report>
+      <Id>3</Id>
+      <Name>Отгрузки за период</Name>
+      <TemplatePath>
+		C:\Users\d.zhuravlev\Planning\Planning_TestVer\Planning\bin\Debug\Reports\ОтчетЗаПериод.xltx
+      </TemplatePath>
+    </Report>
+    <Report>
+      <Id>4</Id>
+      <Name>Статистика за период</Name>
+      <TemplatePath>
+		C:\Users\d.zhuravlev\Planning\Planning_TestVer\Planning\bin\Debug\Reports\ОтчетСтатистикаЗаПериод.xltx
+      </TemplatePath>
+    </Report>
+    <Report>
+      <Id>5</Id>
+      <Name>Отчет по ТС</Name>
+      <TemplatePath>
+		C:\Users\d.zhuravlev\Planning\Planning_TestVer\Planning\bin\Debug\Reports\ОтчетТС.xltx
+      </TemplatePath>
+    </Report>
+  </Reports>
+  <VolumeCalcParams>
+    <ImportStartRow>2</ImportStartRow>
+    <ImportColVendorCode>1</ImportColVendorCode>
+    <ImportColName>2</ImportColName>
+    <ImportColAmount>3</ImportColAmount>
+  </VolumeCalcParams>
+  <ShowOrderDetailColumn>True</ShowOrderDetailColumn>
+  <DefaultWarehouseCode>
+  </DefaultWarehouseCode>
+  <DefaultTransportViewCode>
+  </DefaultTransportViewCode>
+  <View>
+    <HideColumns>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,</HideColumns>
+  </View>
+</Settings>

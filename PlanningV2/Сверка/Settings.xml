@@ -15,7 +15,7 @@
     <PeriodTemplate>C:\Planning\Reports\ОтчетЗаПериод.xltx</PeriodTemplate>
   </ReportTemplate>
   <View>
-    <HideColumns>colIdNakl,colKlientId,colDoneShare,colCopmletePct,PrcValue,colComment,colOrderComment,colGate,colSpecCond,colDriverPhone,colDriverName,colTransportType,colTrackNumber,colTrailerNumber,colAttorneyNumber,colAttorneyDate,colDelayReason,colDelayComment,colDepositor,colStampNumber,FontColor,BackgroundColor,colOrdLvId,olvRowNumberRange</HideColumns>
+    <HideColumns>colIdNakl,colKlientId,colDoneShare,colCopmletePct,PrcValue,colComment,colOrderComment,colGate,colSpecCond,colDriverPhone,colDriverName,colTransportType,colTrailerNumber,colAttorneyNumber,colAttorneyDate,colDelayReason,colDelayComment,colDepositor,colStampNumber,FontColor,BackgroundColor,colOrdLvId,olvRowNumberRange</HideColumns>
     <ActionFilter>вход,выход</ActionFilter>
     <ShipmentColumns>
       <ShipmentColumns>

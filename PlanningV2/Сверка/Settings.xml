@@ -15,223 +15,266 @@
     <PeriodTemplate>C:\Planning\Reports\ОтчетЗаПериод.xltx</PeriodTemplate>
   </ReportTemplate>
   <View>
-    <HideColumns>colIdNakl,colKlientId,colDoneShare,colCopmletePct,PrcValue,colComment,colOrderComment,colGate,colSpecCond,colDriverPhone,colDriverName,colTransportType,colTrailerNumber,colAttorneyNumber,colAttorneyDate,colDelayReason,colDelayComment,colDepositor,colStampNumber,FontColor,BackgroundColor,colOrdLvId,olvRowNumberRange</HideColumns>
+    <HideColumns>colIdNakl,colKlientId,colCopmletePct,PrcValue,colSpecCond,colDriverPhone,colDriverName,colTransportType,colTrailerNumber,colAttorneyNumber,colAttorneyDate,colDelayReason,colDelayComment,colDepositor,colStampNumber,FontColor,BackgroundColor,colOrdLvId,olvRowNumberRange</HideColumns>
     <ActionFilter>вход,выход</ActionFilter>
     <ShipmentColumns>
       <ShipmentColumns>
         <Id>UniqueKey</Id>
         <Order>22</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colId</Id>
         <Order>1</Order>
         <Visible>False</Visible>
+        <Width>62</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colIdNakl</Id>
         <Order>2</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDate</Id>
         <Order>3</Order>
         <Visible>False</Visible>
+        <Width>73</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colTime</Id>
         <Order>4</Order>
         <Visible>False</Visible>
+        <Width>62</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDirection</Id>
         <Order>5</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colOrderId</Id>
         <Order>6</Order>
         <Visible>False</Visible>
+        <Width>120</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colOrderType</Id>
         <Order>5</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colKlientId</Id>
         <Order>9</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colKlientName</Id>
-        <Order>10</Order>
+        <Order>7</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colStatus</Id>
         <Order>11</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colCopmletePct</Id>
         <Order>13</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>PrcValue</Id>
         <Order>15</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDoneShare</Id>
         <Order>16</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colComment</Id>
         <Order>17</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colOrderComment</Id>
         <Order>18</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colGate</Id>
         <Order>19</Order>
         <Visible>False</Visible>
+        <Width>54</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colSpecCond</Id>
         <Order>20</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDriverPhone</Id>
         <Order>23</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDriverName</Id>
         <Order>25</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colTransComp</Id>
         <Order>27</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colTransportType</Id>
         <Order>28</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colTrackNumber</Id>
         <Order>29</Order>
         <Visible>False</Visible>
+        <Width>87</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colTrailerNumber</Id>
         <Order>30</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colAttorneyNumber</Id>
         <Order>18</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colAttorneyDate</Id>
         <Order>32</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colSubmissionTime</Id>
         <Order>33</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colStartTime</Id>
         <Order>34</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colEndTimePlan</Id>
         <Order>35</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colEndTimeFact</Id>
         <Order>36</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDelayReason</Id>
         <Order>37</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDelayComment</Id>
         <Order>38</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colDepositor</Id>
         <Order>39</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colStampNumber</Id>
         <Order>40</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>FontColor</Id>
         <Order>41</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>BackgroundColor</Id>
         <Order>42</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>IsAddLv</Id>
-        <Order>21</Order>
+        <Order>12</Order>
         <Visible>False</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colShippingPlacesNumber</Id>
         <Order>14</Order>
         <Visible>False</Visible>
+        <Width>82</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colOrderWeight</Id>
-        <Order>26</Order>
+        <Order>17</Order>
         <Visible>False</Visible>
+        <Width>79</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colOrdPartLVCode</Id>
         <Order>7</Order>
         <Visible>True</Visible>
+        <Width>97</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colIsEdm</Id>
         <Order>12</Order>
         <Visible>True</Visible>
+        <Width>0</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colSupplier</Id>
         <Order>43</Order>
         <Visible>True</Visible>
+        <Width>128</Width>
       </ShipmentColumns>
       <ShipmentColumns>
         <Id>colTransportView</Id>
         <Order>22</Order>
         <Visible>True</Visible>
+        <Width>82</Width>
       </ShipmentColumns>
     </ShipmentColumns>
     <WarehouseFilter>Чехов,Питер</WarehouseFilter>

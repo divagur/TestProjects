@@ -1,0 +1,1 @@
+insert into functions(code,name) values('TCKpiDelay','Критерии KPI ТК по времени опоздания')
